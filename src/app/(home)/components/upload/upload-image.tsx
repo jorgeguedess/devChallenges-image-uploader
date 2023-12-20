@@ -8,15 +8,9 @@ export const UploadImage = () => {
   const { setImageUrl, setLoading, setError } = useImage();
 
   return (
-    <>
+    <div className="flex w-full flex-col items-center gap-4">
       <UploadDropzone
-        appearance={{
-          container: {
-            border: "1px dashed #97BEF4;",
-            backgroundColor: "#F6F8FB;",
-            borderRadius: "0.75rem",
-          },
-        }}
+        className="w-full rounded-xl border border-dashed border-[#97bef4] bg-[#f6f8fb]"
         content={{
           label: "Drag & Drop your image here",
           uploadIcon: <UploadSvg />,
@@ -35,6 +29,7 @@ export const UploadImage = () => {
         onUploadBegin={() => {
           setLoading(true);
         }}
+        config={{ mode: "auto" }}
       />
       <span className="text-sm font-medium tracking-[-0.42px] text-primary-gray4">
         Or
@@ -55,7 +50,7 @@ export const UploadImage = () => {
           setLoading(true);
         }}
       />
-    </>
+    </div>
   );
 };
 
