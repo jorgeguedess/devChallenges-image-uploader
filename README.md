@@ -66,7 +66,7 @@ $ git clone https://github.com/jorgeguedess/devChallenges-image-uploader
 $ npm install
 
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 ## Contact
